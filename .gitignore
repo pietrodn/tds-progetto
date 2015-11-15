@@ -39,3 +39,4 @@
 
 # Ignore compilation product
 main.pdf
+*-eps-converted-to.pdf

@@ -5,6 +5,9 @@
 \usepackage{amsmath}
 \usepackage[italian]{babel}
 \usepackage{tablefootnote}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{hyperref}
 
 % Table padding
 %\renewcommand{\arraystretch}{2}
@@ -209,15 +212,45 @@ Questi equilibri esistono solo per $R > \frac{1}{\alpha}$, condizione che dunque
         & tr $J$ & $\det J$ & tipo\\
         \hline
         $\dfrac{1\strut}{\alpha\strut}<R<k$\tablefootnote{$k=\dfrac{-L\alpha + \sqrt{L^2\alpha^2+3LC}}{C} = 27.82 \Omega$}
-        & $>0$ & $>0$ & instabile \\
+        & $>0$ & $>0$ & fuoco instabile \\
         \hline
-        $R>k$ & $<0$ & $>0$ & stabile \\
+        $R>k$ & $<0$ & $>0$ & fuoco stabile \\
         \hline
     \end{tabular}
     \caption{Stabilità dell'equilibrio $\left( \pm \sqrt{\frac{\alpha R -1}{\beta R^3}}, \pm \sqrt{\frac{\alpha R -1}{\beta R}} \right)$ al variare di R.}
-    \label{stab-00}
+    \label{stab-eq2}
     \end{center}
 \end{table}
+
+\subsection{Biforcazioni degli stati di equilibrio}
+Per $R=\frac{1}{\alpha}$ l'origine passa da equilibrio instabile a sella, e nascono due nuovi equilibri instabili. Abbiamo dunque una biforcazione forcone, illustrata in \autoref{fig:forcone}.
+
+\begin{figure}
+\begin{center}
+\subfigure[Biforcazione per $x_1$ al variare di $R$ nell'intorno di $R = 25 \Omega$.]{\includegraphics[width=0.8\textwidth]{matcont/BP_25ohm_x1}}
+\vfill
+\subfigure[Biforcazione per $x_2$ al variare di $R$ nell'intorno di $R = 25 \Omega$.]{\includegraphics[width=0.8\textwidth]{matcont/BP_25ohm_x2}}
+\caption{Biforcazione forcone per $R=25 \Omega$.}
+\label{fig:forcone}
+\end{center}
+\end{figure}
+
+Invece, per $R=k=\dfrac{-L\alpha + \sqrt{L^2\alpha^2+3LC}}{C} = 27.82 \Omega$, i due equilibri diversi dall'origine passano da fuoco instabile a fuoco stabile. La condizione di Hopf è verificata, dunque abbiamo una biforcazione di Hopf.
+
+\subsection{Cicli}
+Per $R<\frac{1}{\alpha}=25 \Omega$, il sistema ammette un ciclo stabile che contiene l'equilibrio instabile.
+
+Per $\frac{1}{\alpha} < R < k$, il sistema ammette un ciclo stabile che contiene l'origine (sella) e i due equilibri instabili, compatibilmente con il criterio di Poincaré.
+
+\begin{figure}
+\begin{center}
+\subfigure[Ciclo per $R = 15 \Omega$.]{\includegraphics[width=0.8\textwidth]{pplane/Cycle15ohm}}
+\vfill
+\subfigure[Ciclo per $R = 26 \Omega$.]{\includegraphics[width=0.8\textwidth]{pplane/Cycle26ohm}}
+\caption{Cicli per due parametri di $R$.}
+\label{fig:cicli}
+\end{center}
+\end{figure}
 
 \end{enumerate}
 \end{document}

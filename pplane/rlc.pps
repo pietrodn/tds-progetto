@@ -1,0 +1,12 @@
+%% PPLANE file %%
+
+H.name = 'rlc.pps';
+H.xvar = 'x1';
+H.yvar = 'x2';
+H.xder = '-R/L*x1+1/L*x2';
+H.yder = '-1/C*x1+1/C*(alfa*x2-beta*x2^3)';
+H.pname = {'R','alfa','L','beta','C',''};
+H.pval = {'50','0.04','12E-09','0.18','12E-12',''};
+H.fieldtype = 'nullclines';
+H.npts = 20;
+H.wind = [-1  1 -1  1];
