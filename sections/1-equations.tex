@@ -1,0 +1,42 @@
+\section{Equazioni di stato}
+Considero l'equazione caratteristica del condensatore $C$:
+\begin{equation}
+\label{cond-caratt}
+i_c = C \dot{x_2}
+\end{equation}
+
+Applico LKC al nodo A:
+\begin{equation}
+i_c = -x_1 - i
+\end{equation}
+
+Sostituendo $i_c$ nell'equazione~\ref{cond-caratt}, ottengo la prima equazione di stato:
+\begin{equation}
+\dot{x_2} = -\frac{1}{C} x_1 + \frac{1}{C}\left( \alpha x_2 - \beta x_2^3\right)
+\end{equation}
+
+Poi, considero l'equazione caratteristica del condensatore $L$:
+\begin{equation}
+\label{ind-caratt}
+v_L = L \dot{x_1}
+\end{equation}
+
+Applico LKT alla maglia di sinistra, ottenendo:
+\begin{equation}
+x_2 = v_R + v_L = x_1 R + L \dot{x_1}
+\end{equation}
+
+Da cui la seconda equazione di stato:
+\begin{equation}
+    \dot{x_1} = -\frac{R}{L}x_1 + \frac{1}{L} x_2
+\end{equation}
+
+Il sistema è dunque descritto dalle equazioni:
+\begin{equation}
+    \left\{
+    \begin{aligned}
+        \dot{x_1} =& -\frac{\strut R}{\strut L}x_1 + \frac{1}{L} x_2\\
+        \dot{x_2} =& -\frac{\strut 1}{\strut C} x_1 + \frac{1}{C}\left( \alpha x_2 - \beta x_2^3\right)\\
+    \end{aligned}
+    \right.
+\end{equation}
