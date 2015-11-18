@@ -1,0 +1,25 @@
+% Valori biforcazioni
+% R = 28.35 doppia omoclina
+% R = 28.49 tangente di cicli
+
+-------
+
+first point found
+tangent vector to first point found
+label = BP, x = ( 0.000000 0.000000 25.000000 )
+label = H , x = ( 0.000000 0.000000 40.000000 )
+Neutral saddle
+
+elapsed time  = 7.3 secs
+npoints curve = 300
+first point found
+tangent vector to first point found
+label = H , x = ( 0.005397 0.150165 27.823300 )
+First Lyapunov coefficient = 4.495504e+04
+
+elapsed time  = 12.6 secs
+npoints curve = 300
+first point found
+tangent vector to first point found
+label = H , x = ( -0.005397 -0.150165 27.823300 )
+First Lyapunov coefficient = 4.495504e+04

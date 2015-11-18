@@ -15,8 +15,8 @@ Se $R \le \frac{1}{\alpha}$, allora il termine $( \beta R^3 x_1^2 - \alpha R + 1
 
 Altrimenti, esistono altri due equilibri oltre a quello banale.
 
-\begin{table}[h]
-\begin{center}
+\begin{table}
+    \centering
     \begin{tabular}{l | l}
         \textbf{R} & \textbf{Equilibri}\\
         \hline
@@ -24,8 +24,7 @@ Altrimenti, esistono altri due equilibri oltre a quello banale.
         $R > \dfrac{\strut 1}{\strut\alpha}$ & $(0,0),
         \left( \pm \sqrt{\dfrac{\strut\alpha R -1}{\strut\beta R^3}}, \pm \sqrt{\dfrac{\alpha R -1}{\beta R}} \right)$
     \end{tabular}
-\end{center}
-\caption{Equilibri del sistema al variare di $R$.}
+    \caption{Equilibri del sistema al variare di $R$.}
 \end{table}
 
 \subsection{Stabilità}
@@ -48,12 +47,7 @@ Analizziamo ora il tipo degli equilibri.
     -\dfrac{\strut 1}{C\strut} & \dfrac{\alpha}{C} \\
     \end{bmatrix}
 \end{equation}
-% Il polinomio caratteristico è nella forma:
-% \begin{equation}
-%     \lambda^2 + \lambda\left(\frac{R}{L}-\frac{\alpha}{C}\right) + \frac{1-R\alpha}{CL}
-% \end{equation}
 
-Calcolo traccia e determinante di $J(0,0)$:
 \begin{equation}
 \textrm{tr } J(0,0) = \frac{L\alpha-CR}{CL}
 \end{equation}
@@ -62,8 +56,8 @@ Calcolo traccia e determinante di $J(0,0)$:
 \end{equation}
 L'analisi di stabilità dell'equilibrio è mostrata nella tabella~\ref{stab-00}.
 
-\begin{table}[h]
-    \begin{center}
+\begin{table}
+    \centering
     \begin{tabular}{l l l l l}
         & & tr $J(0,0)$ & $\det J(0,0)$ & tipo\\
         \hline
@@ -76,7 +70,6 @@ L'analisi di stabilità dell'equilibrio è mostrata nella tabella~\ref{stab-00}.
     \end{tabular}
     \caption{Stabilità dell'equilibrio $(0,0)$ al variare di R.}
     \label{stab-00}
-    \end{center}
 \end{table}
 
 \item $\left( \pm \sqrt{\dfrac{\strut\alpha R -1}{\strut\beta R^3}}, \pm \sqrt{\dfrac{\alpha R -1}{\beta R}} \right)$
@@ -99,36 +92,49 @@ Questi equilibri esistono solo per $R > \frac{1}{\alpha}$, condizione che dunque
     \textrm{tr } J = \dfrac{-CR^2+3L-2RL\alpha}{CRL}
 \end{equation}
 
-\begin{table}[h]
-    \begin{center}
-    \begin{tabular}{l l l l}
-        & tr $J$ & $\det J$ & tipo\\
+\begin{table}
+    \centering
+    \begin{tabular}{l l l l l}
+        & & tr $J$ & $\det J$ & tipo\\
         \hline
         $\dfrac{1\strut}{\alpha\strut}<R<k$\tablefootnote{$k=\dfrac{-L\alpha + \sqrt{L^2\alpha^2+3LC}}{C} = 27.82 \Omega$}
-        & $>0$ & $>0$ & fuoco instabile \\
+        & $(25 \Omega, 27.82 \Omega)$ & $>0$ & $>0$ & fuoco instabile \\
         \hline
-        $R>k$ & $<0$ & $>0$ & fuoco stabile \\
+        $R>k$ & $(27.82 \Omega, +\infty)$ & $<0$ & $>0$ & fuoco stabile \\
         \hline
     \end{tabular}
     \caption{Stabilità dell'equilibrio $\left( \pm \sqrt{\frac{\alpha R -1}{\beta R^3}}, \pm \sqrt{\frac{\alpha R -1}{\beta R}} \right)$ al variare di R.}
     \label{stab-eq2}
-    \end{center}
 \end{table}
 
 \subsection{Biforcazioni degli stati di equilibrio}
-Per $R=\frac{1}{\alpha}$ l'origine passa da equilibrio instabile a sella, e nascono due nuovi equilibri instabili. Abbiamo dunque una biforcazione forcone, illustrata in \autoref{fig:forcone}.
+Le biforcazioni del sistema al variare di $R$ sono elencate in~\autoref{tab:biforc-r}.
+Il sistema ammette una biforcazione forcone, due Hopf, una doppia omoclina e una biforcazione tangente di cicli. I valori di $R$ a cui si presentano le biforcazioni doppia omoclina e tangente di cicli sono stati ricavati empiricamente simulando il sistema con Pplane.
+
+\begin{table}
+    \centering
+    \begin{tabular}{l l p{0.5\linewidth}}
+        $\mathbf{R}$ & \textbf{Tipo} & \textbf{Note}\\
+        \hline
+        $\frac{1}{\alpha} = 25 \Omega$ & forcone & per $R>25 \Omega$ nascono due equilibri instabili (\autoref{fig:forcone}) \\
+        \hline
+        $k=27.82 \Omega$ & Hopf (doppia) & intorno ai due rami del forcone si creano cicli instabili; i due equilibri diventano stabili (\autoref{fig:hopf}) \\
+        \hline
+        $28.35 \Omega$ & doppia omoclina & i cicli generati dalle Hopf collidono con la sella in $(0,0)$; si crea un nuovo ciclo instabile interno (\autoref{fig:dopo-omoclina}) \\
+        \hline
+        $28.49 \Omega$ & tangente di cicli & il ciclo instabile interno e quello stabile esterno collidono e spariscono \\
+        \hline
+    \end{tabular}
+    \caption{Biforcazioni del sistema al variare di $R$.}
+    \label{tab:biforc-r}
+\end{table}
 
 \begin{figure}
-\begin{center}
-\subfigure[Biforcazione per $x_1$ al variare di $R$ nell'intorno di $R = 25 \Omega$.]{\includegraphics[width=0.8\textwidth]{matcont/BP_25ohm_x1}}
-\vfill
-\subfigure[Biforcazione per $x_2$ al variare di $R$ nell'intorno di $R = 25 \Omega$.]{\includegraphics[width=0.8\textwidth]{matcont/BP_25ohm_x2}}
-\caption{Biforcazione forcone per $R=25 \Omega$.}
-\label{fig:forcone}
-\end{center}
+    \centering
+    \includegraphics[width=1.1\textwidth]{matcont/ForconeHopf}
+    \caption{Le biforcazioni forcone e Hopf.}
+    \label{fig:forcone}
 \end{figure}
-
-Invece, per $R=k=\dfrac{-L\alpha + \sqrt{L^2\alpha^2+3LC}}{C} = 27.82 \Omega$, i due equilibri diversi dall'origine passano da fuoco instabile a fuoco stabile. La condizione di Hopf è verificata, dunque abbiamo una biforcazione di Hopf supercritica (dalla simulazione, i cicli – stabili – sono dalla parte dell'equilibrio instabile).
 
 \subsection{Cicli}
 Per $R<\frac{1}{\alpha}=25 \Omega$, il sistema ammette un ciclo stabile che contiene l'equilibrio instabile.
@@ -136,15 +142,33 @@ Per $R<\frac{1}{\alpha}=25 \Omega$, il sistema ammette un ciclo stabile che cont
 Per $\frac{1}{\alpha} < R < k$, il sistema ammette un ciclo stabile che contiene l'origine (sella) e i due equilibri instabili, compatibilmente con il criterio di Poincaré.
 
 \begin{figure}
-\begin{center}
-\subfigure[Ciclo stabile per $R = 15 \Omega$.]{\includegraphics[width=0.8\textwidth]{pplane/Cycle15ohm}}
-\vfill
-\subfigure[Ciclo stabile (esterno) e cicli instabili (interni) per $R = 26 \Omega$.]{\includegraphics[width=0.8\textwidth]{pplane/Cycle26ohm}}
-\caption{Cicli per due parametri di $R$.}
-\label{fig:cicli}
-\end{center}
+\centering
+    \begin{subfigure}[b]{0.8\textwidth}
+            \includegraphics[width=\textwidth]{pplane/Cycle24ohm}
+            \caption{Ciclo stabile per $R = 24 \Omega$.}
+    \end{subfigure}
+    \par\bigskip
+    \begin{subfigure}[b]{0.8\textwidth}
+            \includegraphics[width=\textwidth]{pplane/Cycle26ohm}
+            \caption{Ciclo stabile (esterno) e cicli instabili (interni) per $R = 26 \Omega$.}
+            \label{fig:hopf}
+    \end{subfigure}
+    \caption{Cicli prima e dopo la biforcazione di Hopf.}
+    \label{fig:cicli-hopf}
 \end{figure}
 
-% Valori biforcazioni
-% R = 28.35 doppia omoclina
-% R = 28.49 tangente di cicli
+\begin{figure}
+    \centering
+    \begin{subfigure}[b]{0.8\textwidth}
+            \includegraphics[width=\textwidth]{pplane/DoppiaOmoclina}
+            \caption{I due cicli instabili toccano la sella in $(0,0)$ subito prima della biforcazione omoclina.}
+    \end{subfigure}
+    \par\bigskip
+    \begin{subfigure}[b]{0.8\textwidth}
+            \includegraphics[width=\textwidth]{pplane/TangenteCicli}
+            \caption{Dopo la biforcazione omoclina i due cicli instabili si sono fusi; qui sono mostrati immediatamente prima della tangente di cicli.}
+            \label{fig:dopo-omoclina}
+    \end{subfigure}
+    \caption{Cicli prima e dopo la biforcazione omoclina.}
+    \label{fig:cicli-omoclina}
+\end{figure}
