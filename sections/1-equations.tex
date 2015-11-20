@@ -1,4 +1,22 @@
 \section{Equazioni di stato}
+
+\begin{figure}
+\centering
+\begin{circuitikz}
+\draw(0,0)
+to[R, l=$R$, v_>=$v_R$] (0,4)
+to[L, l=$L$, v_>=$v_L$, i<=$x_1$, -*] (4,4)
+    node[label=A]{}
+to[C, l=$C$, v=$x_2$, i>^=$i_C$] (4,0)
+to (0,0);
+\draw(4,4) to[short, i=$i$] (8,4)
+to[generic, l=BNL, v=$x_2$] (8,0)
+to (4,0);
+\end{circuitikz}
+\caption{Il circuito elettrico da studiare.}
+\label{fig:circuito}
+\end{figure}
+
 Considero l'equazione caratteristica del condensatore $C$:
 \begin{equation}
 \label{cond-caratt}

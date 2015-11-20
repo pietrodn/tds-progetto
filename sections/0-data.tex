@@ -1,21 +1,9 @@
-\begin{circuitikz}
-\draw(0,0)
-to[R, l=$R$, v_>=$v_R$] (0,4)
-to[L, l=$L$, v_>=$v_L$, i<=$x_1$, -*] (4,4)
-    node[label=A]{}
-to[C, l=$C$, v=$x_2$, i>^=$i_C$] (4,0)
-to (0,0);
-\draw(4,4) to[short, i=$i$] (8,4)
-to[generic, l=BNL, v=$x_2$] (8,0)
-to (4,0);
-\end{circuitikz}
-
 \section*{Dati}
 \begin{itemize}
     \item $\alpha = 0.04$
     \item $\beta = 0.18$
-    \item $n = 16$
-    \item $c = 4$
+    \item $n = 16 \qquad [n]_3 = 1$
+    \item $c = 4 \qquad [c]_3 = 1$
     \item $L = 12\,\textrm{nH}$
     \item $C = 12\,\textrm{pF}$
 \end{itemize}

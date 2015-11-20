@@ -3,6 +3,14 @@ x2'=-1/CC*x1+1/CC*(alfa*x2-beta*x2^3)
 
 -------
 
+RR=R0*(1+0.25*x3)
+x1'=-RR/LL*x1+1/LL*x2
+x2'=-1/CC*x1+1/CC*(alfa*x2-beta*x2^3)
+x3'=x3-omega*x4-(x3^2+x4^2)*x3
+x4'=omega*x3+x4-(x3^2+x4^2)*x4
+
+-------
+
 % Valori biforcazioni
 % R = 28.35 doppia omoclina
 % R = 28.49 tangente di cicli

@@ -1,19 +1,5 @@
-\section{Equilibri}
-Annullando le derivate delle equazioni del sistema, con semplici passaggi si ricavano le seguenti equazioni:
-
-\begin{equation}
-\left\{
-\begin{aligned}
-    &x_1 ( \beta R^3 x_1^2 - \alpha R + 1) = 0\\
-    &x_2 = R x_1\\
-\end{aligned}
-\right.
-\end{equation}
-
-Dunque esiste sempre l'equilibrio banale $x_1 = x_2 = 0$.
-Se $R \le \frac{1}{\alpha}$, allora il termine $( \beta R^3 x_1^2 - \alpha R + 1)$ è sempre positivo o nullo e non vi sono altri equilibri.
-
-Altrimenti, esistono altri due equilibri oltre a quello banale.
+\section{Equilibri e loro biforcazioni}
+Annullando le derivate delle equazioni del sistema, con semplici passaggi si ottengono gli equilibri mostrati in~\autoref{tab:equilibria}.
 
 \begin{table}
     \centering
@@ -25,6 +11,7 @@ Altrimenti, esistono altri due equilibri oltre a quello banale.
         \left( \pm \sqrt{\dfrac{\strut\alpha R -1}{\strut\beta R^3}}, \pm \sqrt{\dfrac{\alpha R -1}{\beta R}} \right)$
     \end{tabular}
     \caption{Equilibri del sistema al variare di $R$.}
+    \label{tab:equilibria}
 \end{table}
 
 \subsection{Stabilità}
@@ -54,23 +41,7 @@ Analizziamo ora il tipo degli equilibri.
 \begin{equation}
 \det J(0,0) = \frac{1-r\alpha}{CL}
 \end{equation}
-L'analisi di stabilità dell'equilibrio è mostrata nella tabella~\ref{stab-00}.
-
-\begin{table}
-    \centering
-    \begin{tabular}{l l l l l}
-        & & tr $J(0,0)$ & $\det J(0,0)$ & tipo\\
-        \hline
-        $R<\dfrac{1\strut}{\alpha\strut}$ & $(0, 25 \Omega)$ & $>0$ & $>0$ & instabile \\
-        \hline
-        $\dfrac{1\strut}{\alpha\strut}<R<\dfrac{L\alpha}{C}$ & $(25 \Omega, 40 \Omega)$ & $>0$ & $<0$ & sella \\
-        \hline
-        $R>\dfrac{L\alpha\strut}{C\strut}$ & $(40 \Omega, +\infty)$ & $<0$ & $<0$ & sella \\
-        \hline
-    \end{tabular}
-    \caption{Stabilità dell'equilibrio $(0,0)$ al variare di R.}
-    \label{stab-00}
-\end{table}
+L'analisi di stabilità dell'equilibrio è mostrata in~\autoref{stab-00}.
 
 \item $\left( \pm \sqrt{\dfrac{\strut\alpha R -1}{\strut\beta R^3}}, \pm \sqrt{\dfrac{\alpha R -1}{\beta R}} \right)$
 
@@ -92,19 +63,41 @@ Questi equilibri esistono solo per $R > \frac{1}{\alpha}$, condizione che dunque
     \textrm{tr } J = \dfrac{-CR^2+3L-2RL\alpha}{CRL}
 \end{equation}
 
+L'analisi di stabilità degli equilibri è mostrata in~\autoref{stab-eq2}.
+
 \begin{table}
     \centering
-    \begin{tabular}{l l l l l}
-        & & tr $J$ & $\det J$ & tipo\\
-        \hline
-        $\dfrac{1\strut}{\alpha\strut}<R<k$\tablefootnote{$k=\dfrac{-L\alpha + \sqrt{L^2\alpha^2+3LC}}{C} = 27.82 \Omega$}
-        & $(25 \Omega, 27.82 \Omega)$ & $>0$ & $>0$ & fuoco instabile \\
-        \hline
-        $R>k$ & $(27.82 \Omega, +\infty)$ & $<0$ & $>0$ & fuoco stabile \\
-        \hline
-    \end{tabular}
-    \caption{Stabilità dell'equilibrio $\left( \pm \sqrt{\frac{\alpha R -1}{\beta R^3}}, \pm \sqrt{\frac{\alpha R -1}{\beta R}} \right)$ al variare di R.}
-    \label{stab-eq2}
+    \begin{subtable}[Equilibrio $(0,0)$]{\textwidth}
+        \centering
+        \begin{tabular}{l l l l l}
+            & & tr $J(0,0)$ & $\det J(0,0)$ & tipo\\
+            \hline
+            $R<\dfrac{1\strut}{\alpha\strut}$ & $(0, 25 \Omega)$ & $>0$ & $>0$ & instabile \\
+            \hline
+            $\dfrac{1\strut}{\alpha\strut}<R<\dfrac{L\alpha}{C}$ & $(25 \Omega, 40 \Omega)$ & $>0$ & $<0$ & sella \\
+            \hline
+            $R>\dfrac{L\alpha\strut}{C\strut}$ & $(40 \Omega, +\infty)$ & $<0$ & $<0$ & sella \\
+            \hline
+        \end{tabular}
+        \caption{Stabilità dell'equilibrio $(0,0)$ al variare di R.}
+        \label{stab-00}
+    \end{subtable}
+    \par\bigskip\bigskip
+    \begin{subtable}[Equilibrio $(0,0)$]{\textwidth}
+        \centering
+        \begin{tabular}{l l l l l}
+            & & tr $J$ & $\det J$ & tipo\\
+            \hline
+            $\dfrac{1\strut}{\alpha\strut}<R<k$\tablefootnote{$k=\dfrac{-L\alpha + \sqrt{L^2\alpha^2+3LC}}{C} = 27.82 \Omega$}
+            & $(25 \Omega, 27.82 \Omega)$ & $>0$ & $>0$ & fuoco instabile \\
+            \hline
+            $R>k$ & $(27.82 \Omega, +\infty)$ & $<0$ & $>0$ & fuoco stabile \\
+            \hline
+        \end{tabular}
+        \caption{Stabilità dell'equilibrio $\left( \pm \sqrt{\frac{\alpha R -1}{\beta R^3}}, \pm \sqrt{\frac{\alpha R -1}{\beta R}} \right)$ al variare di R.}
+        \label{stab-eq2}
+    \end{subtable}
+    \caption{Analisi di stabilità degli equilibri (\autoref{tab:equilibria}).}
 \end{table}
 
 \subsection{Biforcazioni degli stati di equilibrio}
