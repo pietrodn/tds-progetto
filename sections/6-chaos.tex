@@ -36,27 +36,34 @@ La precedente osservazione semplifica molto il problema, che si riduce a trovare
 
 Provando a calcolare sistematicamente gli esponenti di Lyapunov del sistema~\ref{eq:sistema-chaos} per valori di $\omega$ nell'ordine di grandezza dell'unità, si ottiene il risultato illustrato in~\autoref{fig:lyapunov-plot}.
 
-\begin{figure}[h]
-\centering
-\includegraphics[width=\textwidth]{matcont/LyapunovPlot}
-\caption{Esponenti di Lyapunov del sistema~\ref{eq:sistema-chaos} calcolati per $\omega \in [0.5, 5]$, $R=29.5 \Omega$.}
-\label{fig:lyapunov-plot}
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{matcont/LyapunovPlot}
+    \caption{Esponenti di Lyapunov del sistema~\ref{eq:sistema-chaos} calcolati per $\omega \in [0.5, 5]$, $R=29.5 \Omega$.}
+    \label{fig:lyapunov-plot}
 \end{figure}
 
 Integrando per intervalli estesi il sistema, si verifica che effettivamente per $\omega = 3.1415$ gli esponenti di Lyapunov valgono: $[0.28, 0, -0.77, -2]$.
 
-Ciò dimostra il comportamento caotico del sistema. Lo strano attrattore simulato per gli stessi parametri è mostrato in~\autoref{fig:strano-attrattore}, insieme alla sua sezione di Poincaré.
+Ciò dimostra il comportamento caotico del sistema. Lo strano attrattore simulato per gli stessi parametri è mostrato in~\autoref{fig:strano-attrattore}, insieme alla sua sezione di Poincaré in~\autoref{fig:chaos-poincare}.
 
 \begin{figure}
     \centering
-    \begin{subfigure}[b]{0.8\textwidth}
+    \includegraphics[width=\textwidth]{matcont/PoincareCaos}
+    \caption{La mappa di Poincaré dello strano attrattore.}
+    \label{fig:chaos-poincare}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \begin{subfigure}[b]{\textwidth}
         \includegraphics[width=\textwidth]{matcont/StranoAttrattore}
         \caption{Simulazione di un'orbita nello strano attrattore.}
     \end{subfigure}
     \par\bigskip
-    \begin{subfigure}[b]{0.8\textwidth}
-        \includegraphics[width=\textwidth]{matcont/PoincareCaos}
-        \caption{La mappa di Poincaré dello strano attrattore.}
+    \begin{subfigure}[b]{0.85\textwidth}
+        \includegraphics[width=\textwidth]{matcont/StranoAttrattore2D}
+        \caption{L'orbita vista ``dall'alto'', sul piano $x_1 x_2$.}
     \end{subfigure}
     \caption{Lo strano attrattore che si ottiene simulando il sistema per $R=29.5 \Omega, \omega = 3.1415$.}
     \label{fig:strano-attrattore}
