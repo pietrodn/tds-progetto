@@ -30,7 +30,7 @@ Dove è immediato verificare per sostituzione che
     \end{aligned}
 \end{equation}
 
-Dall'equazione~\ref{eq:resistenza-var} si osserva che, per valori di $R$ ragionevoli ($29.5 \Omega$ ad esempio) l'oscillazione è sufficientemente ampia da passare per tutti i punti di biforcazione (\autoref{tab:biforc-r}): non è davvero necessario variare $R$ per trovare il caos.
+Dall'equazione~\ref{eq:resistenza-var} si osserva che, per valori di $\bar{R}$ ragionevoli ($29.5 \Omega$ ad esempio) l'oscillazione è sufficientemente ampia da passare per tutti i punti di biforcazione (\autoref{tab:biforc-r}): non è davvero necessario variare $\bar{R}$ per trovare il caos.
 
 La precedente osservazione semplifica molto il problema, che si riduce a trovare un giusto valore del solo parametro $\omega$ per cui il sistema presenti comportamento caotico.
 
@@ -39,7 +39,7 @@ Provando a calcolare sistematicamente gli esponenti di Lyapunov del sistema~\ref
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{matcont/LyapunovPlot}
-    \caption{Esponenti di Lyapunov del sistema~\ref{eq:sistema-chaos} calcolati per $\omega \in [0.5, 5]$, $R=29.5 \Omega$.}
+    \caption{Esponenti di Lyapunov del sistema~\ref{eq:sistema-chaos} calcolati per $\omega \in [0.5, 5]$, $\bar{R}=29.5 \Omega$.}
     \label{fig:lyapunov-plot}
 \end{figure}
 
@@ -56,15 +56,15 @@ Ciò dimostra il comportamento caotico del sistema. Lo strano attrattore simulat
 
 \begin{figure}
     \centering
-    \begin{subfigure}[b]{\textwidth}
+    \begin{subfigure}{\textwidth}
         \includegraphics[width=\textwidth]{matcont/StranoAttrattore}
         \caption{Simulazione di un'orbita nello strano attrattore.}
     \end{subfigure}
     \par\bigskip
-    \begin{subfigure}[b]{0.85\textwidth}
+    \begin{subfigure}{0.85\textwidth}
         \includegraphics[width=\textwidth]{matcont/StranoAttrattore2D}
         \caption{L'orbita vista ``dall'alto'', sul piano $x_1 x_2$.}
     \end{subfigure}
-    \caption{Lo strano attrattore che si ottiene simulando il sistema per $R=29.5 \Omega, \omega = 3.1415$.}
+    \caption{Lo strano attrattore che si ottiene simulando il sistema per $\bar{R}=29.5 \Omega, \omega = 3.1415$.}
     \label{fig:strano-attrattore}
 \end{figure}
