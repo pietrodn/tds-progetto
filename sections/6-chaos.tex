@@ -32,7 +32,15 @@ Dove è immediato verificare per sostituzione che
 
 Dall'equazione~\ref{eq:resistenza-var} si osserva che, per valori di $\bar{R}$ ragionevoli ($29.5 \Omega$ ad esempio) l'oscillazione è sufficientemente ampia da passare per tutti i punti di biforcazione (\autoref{tab:biforc-r}): non è davvero necessario variare $\bar{R}$ per trovare il caos.
 
-La precedente osservazione semplifica molto il problema, che si riduce a trovare un giusto valore del solo parametro $\omega$ per cui il sistema presenti comportamento caotico.
+La precedente osservazione semplifica molto il problema, che si riduce a trovare attraverso delle simulazioni un giusto valore del solo parametro $\omega$ per cui il sistema presenti comportamento caotico.
+
+I dati usati nelle simulazioni sono i seguenti:
+\begin{itemize}
+    \item $\alpha, \beta, L, C$ come indicati nel testo;
+    \item $R=29.5 \Omega$;
+    \item $\bar{x_0} = [-0.005, -0.001, 0, 1]$;
+    \item $\omega \in [0.5, 5]$.
+\end{itemize}
 
 Provando a calcolare sistematicamente gli esponenti di Lyapunov del sistema~\ref{eq:sistema-chaos} per valori di $\omega$ nell'ordine di grandezza dell'unità, si ottiene il risultato illustrato in~\autoref{fig:lyapunov-plot}.
 
