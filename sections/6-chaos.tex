@@ -51,16 +51,9 @@ Provando a calcolare sistematicamente gli esponenti di Lyapunov del sistema~\ref
     \label{fig:lyapunov-plot}
 \end{figure}
 
-Integrando per intervalli estesi il sistema, si verifica che effettivamente per $\omega = 3.1415$ gli esponenti di Lyapunov valgono: $[0.28, 0, -0.77, -2]$.
+Integrando per intervalli estesi di tempo il sistema, si verifica che per $\omega = 3.1415$ gli esponenti di Lyapunov valgono: $[0.28, 0, -0.77, -2]$.
 
 Ciò dimostra il comportamento caotico del sistema. Lo strano attrattore simulato per gli stessi parametri è mostrato in~\autoref{fig:strano-attrattore}, insieme alla sua sezione di Poincaré in~\autoref{fig:chaos-poincare}.
-
-\begin{figure}
-    \centering
-    \includegraphics[width=\textwidth]{matcont/PoincareCaos}
-    \caption{La mappa di Poincaré dello strano attrattore.}
-    \label{fig:chaos-poincare}
-\end{figure}
 
 \begin{figure}
     \centering
@@ -78,6 +71,13 @@ Ciò dimostra il comportamento caotico del sistema. Lo strano attrattore simulat
 \end{figure}
 
 Infine, è possibile mostrare qualitativamente la sensibile dipendenza dalle condizioni iniziali, proprietà caratterizzante degli attrattori caotici, simulando due traiettorie che partono da condizioni iniziali molto vicine, e che finiscono per divergere significativamente. Ciò è mostrato in~\autoref{fig:dipendenza-condizioni}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{matcont/PoincareCaos}
+    \caption{La mappa di Poincaré dello strano attrattore.}
+    \label{fig:chaos-poincare}
+\end{figure}
 
 \begin{figure}
     \centering
